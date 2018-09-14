@@ -15,26 +15,9 @@
 </head>
 <body>
     <!-- 顶部导航栏 -->
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">登入</a></li>
-                    <li><a href="#">快速注册</a></li>
-                    <li><a href="#">帮助</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php
+        require_once("./topnav.php")
+    ?>
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,23 +34,23 @@
             <div class="panel-heading">
                 用户登入
             </div>
-            <div class="panel-body row">
-                <form class="form-horizontal col-md-offset-2">
+            <div class="panel-body center-block text-center">
+                <form class="form-horizontal">
                     <p class="h4">请输入用户名和密码</p>
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
-                        <div class="col-xs-3">
-                        <input type="text" class="form-control" id="inputEmail3">
+                        <label for="inputEmail3" class="col-sm-5 control-label">用户名</label>
+                        <div class="col-sm-3">
+                        <input type="text" class="form-control" name="username">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">密&emsp;码</label>
-                        <div class="col-xs-3">
-                        <input type="password" class="form-control" id="inputPassword3">
+                        <label for="inputPassword3" class="col-sm-5 control-label">密&emsp;码</label>
+                        <div class="col-sm-3">
+                        <input type="password" class="form-control" name="password">
                         </div>
                     </div>
                     <div class="form-group ">
-                        <div class="col-xs-offset-2">
+                        <div class="col-sm-offset-2 col-sm-10">
                         <button class="btn btn-success">登入</button>
                         <a href="" class="aa">新用户，马上注册</a>
                         </div>
