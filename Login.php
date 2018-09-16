@@ -8,6 +8,8 @@
   
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- bootstrapvaildator的样式 -->
+    <link rel="stylesheet" href="./lib/bootstrapvaildator/css/bootstrapValidator.min.css">
     <!-- 自定义样式 -->
     <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
     <!-- 登入样式 -->
@@ -35,7 +37,7 @@
                 用户登入
             </div>
             <div class="panel-body center-block text-center">
-                <form class="form-horizontal">
+                <form id="loginform" class="form-horizontal" method="post">
                     <p class="h4">请输入用户名和密码</p>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 control-label">用户名</label>
@@ -51,8 +53,8 @@
                     </div>
                     <div class="form-group ">
                         <div class="col-sm-offset-2 col-sm-10">
-                        <button class="btn btn-success">登入</button>
-                        <a href="" class="aa">新用户，马上注册</a>
+                        <button type="submit" class="btn btn-success">登入</button>
+                        <a href="./Register.php" class="aa">新用户，马上注册</a>
                         </div>
                     </div>
                 </form>
@@ -61,41 +63,33 @@
         </div>
     </div>
     
-
-
-    <!-- 页脚 -->
-    <div id="footer" class="row el-footer">
-        <div class="container">
-            <div class="col-sm-8 col-xs-12">
-                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
-                <p>版权所有:&emsp;&emsp;2006-2015成都源代码教育咨询有限公司</p>
-                <p>地&emsp;&emsp;址:&emsp;&emsp;成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
-                <p>电&emsp;&emsp;话:&emsp;&emsp;028-86261949&emsp;/&emsp;400-808-6840 
-                邮箱： yuandaima@itsource.cn</p>
-                <p>
-                    <a href="">蜀ICP备14030149号-1</a>&emsp;&emsp;
-                    <a href="">蜀公网安备510114990541</a>
-                </p>
+   
+    <!-- 蒙层 -->
+    <div class="modal fade" id="msgShowModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="msgShowTitle2">标题</h4>
             </div>
-            <div class="col-sm-2 col-xs-6">
-                <p>官方微博:</p>
-                <a href="">
-                    <img class="img-responsive" src="./images/tecent.png" class="img-responsive">
-                </a>
-                <a href="">
-                    <img class="img-responsive" src="./images/sina.png" >
-                </a>
+            <div class="modal-body" id="msgShowContent2">
+                内容
             </div>
-            <div class="col-sm-2 col-xs-6">
-                <p>官方微信:</p>
-                <a href="">
-                    <img class="img-responsive" src="./images/wx.jpg" >
-                </a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭窗口</button>
+            </div>
             </div>
         </div>
     </div>
+
+    <!-- 引入页脚 -->
+    <?php
+        require_once('./footer.php')
+    ?>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrapvaildator/js/bootstrapValidator.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+    <script src="./dist/js/formcheck.min.js"></script>
 </body>
 </html>
