@@ -21,10 +21,11 @@
     //6.根据是否执行成功返回json结果到前端
     if($rs!=null){
         //登录成功就创建seesion对象
-        seesion_start();
+        session_start();
         $_SESSION["username"]=$rs["username"];
         $_SESSION["userid"]=$rs["userid"];
-        $reArrey=["isSueecss"=>true,"msg"=>"用户登录成功","username"=$_SESSION["username"]];
+
+        $reArrey=["isSueecss"=>true,"msg"=>"用户登录成功"];
         //把要返回的数据转成json格式
         echo json_encode($reArrey);
     }else{

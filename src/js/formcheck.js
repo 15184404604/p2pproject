@@ -170,7 +170,7 @@ $(function() {
             const data=$form.serialize();
             // Use Ajax to submit form data
             $.post(regUrl, data, function(result) {
-                //console.log(result);
+                //console.log("api返回的结果",result);
                 if(result.isSueecss){
                     $('#msgShowTitel2').text('登录成功！');
                     $('#msgShowContent2').html(`<span class="glyphicon glyphicon-ok"></span>${result.msg},

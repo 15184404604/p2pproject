@@ -1,14 +1,148 @@
 @import url("./header.less");
-.box-left .col-sm-3{
-    padding: 0px
+#personal{
+    margin-top: 10px;
+    
+    //左侧
+    .panel-heading{
+        .panel-title{
+            a{
+                
+             color: #337ab7;
+             text-decoration: none;
+             &:hover{
+                color: #23527c;
+             }
+    
+            }
+        }
+    };
+    .panel-group,.panel+.panel {
+        margin-top: 0px;
+    };
+    .panel-body{
+        ul{
+            li{
+                line-height: 30px;
+            }
+        }
+    };
+
+    //右侧
+    #mainContent{
+        #btnOnOff{
+            display: none;
+        }
+        .panel-body{
+            padding: 15px 30px;
+
+            //1
+            #userHeader{
+                border-bottom: solid 1px #ccc;
+
+                #userHeaderLeft{
+                    padding: 0px;
+
+                    img{
+                        max-width: 90px;
+                        margin-bottom: 10px;
+                    }
+                };
+            }
+
+            //2
+            #money{
+                font-size: 18px;
+                padding: 15px 0px;
+                span{
+                    color: #337ab7;
+                }
+            }
+
+            //3
+            #myButton{
+                text-align: center;
+                margin-top: 20px
+            }
+        }
+    }
+    
 }
-.panel-title a{
-    text-decoration: none;
-    color: #337ab7;
+
+@media all and (max-width:768px){
+    #personal{
+        height: 1110px;
+        position: relative;
+        left: 0px;
+        transition: all 0.7s;
+        #leftTreeMenu{
+            position: absolute;
+            left: 0px;
+        }
+
+
+        #mainContent{
+            position: absolute;
+            right: -50%;
+            #btnOnOff{
+                position: absolute;
+                top: 0px;
+                z-index: 1000;
+                display: inline-block;
+            }
+            #myButton{
+                text-align: left !important;
+            }
+        }
+    }
+
+    #personal.active{
+        left: -50%
+    }
+    
 }
-.panel-group .panel+.panel {
-    margin-top: 0px;
+
+
+#attestation{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+    .row{
+        margin: 0px;
+        .col-md-4,.col-sm-12{
+            padding: 0px;
+            height: 145px;
+    
+            .attestation-auch{
+                padding-top: 40px;
+                .attestation-auch-right{
+                    margin-left: 10px;
+                    h5{
+                        margin: 0px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    };
+                    p{
+                        margin-bottom: 10px
+                    }
+                };
+                p{
+                    margin: 10px 0px;
+                }
+            }
+        }
+  
+    }
+   
 }
-.panel-group .panel {
-    border-radius: 0px;
+
+
+//借款申请表单样式
+.el-tip-info{
+	padding:20px;
+	background-color: #F4F8FA;
+	border-left: 2px solid #0099DD;
+	margin-bottom: 20px;
+}
+.el-tip-info h3{
+	color:#09d;
 }
